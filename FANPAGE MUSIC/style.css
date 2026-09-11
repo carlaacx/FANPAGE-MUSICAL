@@ -81,7 +81,7 @@ nav a:hover {
     transition: all 0.1s;
 }
 
-#btn-tocar:active {
+btn-tocar:active {
     transform: translate(2px, 2px);
     box-shadow: 1px 1px 0px #2b221e;
 }
@@ -134,26 +134,6 @@ blockquote {
     margin-top: 5px;
 }
 
-.disco-espalhado {
-    position: fixed;
-    width: 140px;
-    height: 140px;
-    background: repeating-radial-gradient(
-        circle,
-        #151515 0px,
-        #151515 5px,
-        #2a2a2a 6px,
-        #151515 7px
-    );
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
-    z-index: 1; 
-    opacity: 0.85;
-}
-
 .rotulo {
     width: 50px;
     height: 50px;
@@ -175,37 +155,6 @@ blockquote {
 .red-label { background-color: #c0392b; }
 .blue-label { background-color: #2980b9; }
 .yellow-label { background-color: #f39c12; }
-
-.disco-1 {
-    top: 40px;
-    left: -40px;
-}
-
-.disco-2 {
-    bottom: 30px;
-    right: -30px; 
-}
-
-.disco-3 {
-    top: 55%;
-    left: 20px;
-    width: 100px;
-    height: 100px;
-}
-
-.girar { animation: rodar 12s linear infinite; }
-.girar-lento { animation: rodar 20s linear infinite; }
-.girar-reverso { animation: rodar 15s linear infinite reverse; }
-
-@keyframes rodar {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
-
-@media (max-width: 850px) {
-    .disco-espalhado {
-        display: none;
-    }
 }
 
 footer {
