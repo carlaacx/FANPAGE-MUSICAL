@@ -1,0 +1,233 @@
+body {
+    font-family: 'Courier Prime', monospace, monospace;
+    background-color: #e3d8c4;
+    color: #1a1615;
+    margin: 0;
+    padding: 20px 10px;
+    overflow-x: hidden;
+}
+
+.pagina-fanzine {
+    max-width: 680px;
+    margin: 0 auto;
+    background-color: #f7f1e5;
+    padding: 30px 25px;
+    border: 2px solid #2b221e;
+    box-shadow: 8px 8px 0px #2b221e;
+    position: relative;
+    z-index: 2;
+}
+
+header {
+    text-align: center;
+    border-bottom: 3px double #2b221e;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.subtitulo-topo {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #665445;
+}
+
+h1 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 2.8rem;
+    margin: 10px 0 5px 0;
+    color: #8c271e;
+    transform: rotate(-1deg);
+}
+
+.slogan {
+    font-style: italic;
+    margin: 0;
+    color: #4a3d35;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+    padding: 10px;
+    background: #eae0cf;
+    border: 1px dashed #2b221e;
+}
+
+nav a {
+    color: #2b221e;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #8c271e;
+}
+
+#btn-tocar {
+    font-family: 'Courier Prime', monospace;
+    background-color: #8c271e;
+    color: #f7f1e5;
+    border: 2px solid #2b221e;
+    padding: 8px 12px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 3px 3px 0px #2b221e;
+    transition: all 0.1s;
+}
+
+#btn-tocar:active {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0px #2b221e;
+}
+
+section {
+    margin-bottom: 25px;
+}
+
+h2 {
+    font-family: 'Permanent Marker', cursive;
+    color: #2b221e;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #8c271e;
+    display: inline-block;
+}
+
+.lista-sebo {
+    list-style-type: square;
+    line-height: 1.8;
+}
+
+.bloco-nota {
+    background-color: #fff9c4;
+    border: 1px solid #d4c87b;
+    padding: 15px;
+    position: relative;
+    transform: rotate(1deg);
+    box-shadow: 3px 3px 6px rgba(0,0,0,0.1);
+}
+
+.postit-tag {
+    font-weight: bold;
+    background: #8c271e;
+    color: white;
+    font-size: 0.75rem;
+    padding: 2px 6px;
+    text-transform: uppercase;
+}
+
+blockquote {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin: 0;
+    text-align: center;
+}
+
+.autor-citacao {
+    text-align: right;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.disco-espalhado {
+    position: fixed;
+    width: 140px;
+    height: 140px;
+    background: repeating-radial-gradient(
+        circle,
+        #151515 0px,
+        #151515 5px,
+        #2a2a2a 6px,
+        #151515 7px
+    );
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+    z-index: 1; 
+    opacity: 0.85;
+}
+
+.rotulo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid #111;
+    position: relative;
+}
+
+.rotulo::after {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px; height: 10px;
+    background-color: #e3d8c4;
+    border-radius: 50%;
+}
+
+.red-label { background-color: #c0392b; }
+.blue-label { background-color: #2980b9; }
+.yellow-label { background-color: #f39c12; }
+
+.disco-1 {
+    top: 40px;
+    left: -40px;
+}
+
+.disco-2 {
+    bottom: 30px;
+    right: -30px; 
+}
+
+.disco-3 {
+    top: 55%;
+    left: 20px;
+    width: 100px;
+    height: 100px;
+}
+
+.girar { animation: rodar 12s linear infinite; }
+.girar-lento { animation: rodar 20s linear infinite; }
+.girar-reverso { animation: rodar 15s linear infinite reverse; }
+
+@keyframes rodar {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@media (max-width: 850px) {
+    .disco-espalhado {
+        display: none;
+    }
+}
+
+footer {
+    border-top: 1px solid #2b221e;
+    margin-top: 20px;
+    padding-top: 10px;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.container-banner {
+    width: 100%;
+    margin-bottom: 20px;
+    border: 2px solid #2b221e;
+    background-color: #2b221e; 
+    overflow: hidden;
+}
+
+.banner-interno {
+    width: 100%;             
+    display: block;
+    object-fit: cover;
+    display: block;
+}
+
